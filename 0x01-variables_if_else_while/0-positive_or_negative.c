@@ -1,10 +1,31 @@
-#!/usr/bin/c
-import random
-number = random.randint(-10, 10)
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
-if number < 0:
-    print("{:d} is negative".format(number))
-elif number > 0:
-    print("{:d} is positive".format(number))
-else:
-    print("{:d} is zero".format(number))
+/**
+ *main - Entry point
+ *Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	if (n > 0)
+	{
+		printf("%i is positive\n", n);
+	}
+	else if (n == 0)
+	{
+		printf("%i is zero\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%i is negative\n", n);
+	}
+
+	return (0);
+}

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/c
 import random
 number = random.randint(-10, 10)
 
